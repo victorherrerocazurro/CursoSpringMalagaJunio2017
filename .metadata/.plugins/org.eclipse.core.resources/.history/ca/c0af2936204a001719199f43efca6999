@@ -1,0 +1,5 @@
+package com.viewnext.holamundomaven.controllers;
+
+public class HolaMundoController {
+
+}
