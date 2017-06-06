@@ -1,0 +1,41 @@
+package com.viewnext.holamundomaven.views;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.View;
+
+public class CustomView implements View {
+	
+	public CustomView(String contentType) {
+		super();
+		this.contentType = contentType;
+	}
+
+	private String contentType; 
+	
+	@Override
+	public String getContentType() {
+		return contentType;
+	}
+
+	@Override
+	public void render(Map<String, ?> arg0, HttpServletRequest arg1, HttpServletResponse arg2) throws Exception {
+		
+		switch (contentType) {
+		case "text/html":
+			
+			break;
+		case "text/plain":
+			
+			break;
+		default:
+			throw new Exception("ContentType no soportado");
+		}
+		
+		
+	}
+
+}

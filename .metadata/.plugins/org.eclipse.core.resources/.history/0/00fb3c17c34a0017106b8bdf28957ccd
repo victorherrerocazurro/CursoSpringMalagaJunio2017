@@ -1,0 +1,5 @@
+package com.viewnext.holamundomaven.views;
+
+public class CustomView {
+
+}

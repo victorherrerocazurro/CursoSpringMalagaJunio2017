@@ -1,0 +1,23 @@
+package com.viewnext.holamundomaven.views;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.View;
+
+public class CustomView implements View {
+
+	@Override
+	public String getContentType() {
+		return "text/html";
+	}
+
+	@Override
+	public void render(Map<String, ?> arg0, HttpServletRequest arg1, HttpServletResponse arg2) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

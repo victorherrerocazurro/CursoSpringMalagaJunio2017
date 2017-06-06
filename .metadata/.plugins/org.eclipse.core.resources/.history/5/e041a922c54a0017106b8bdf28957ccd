@@ -1,0 +1,30 @@
+package com.viewnext.holamundomaven.controllers;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
+
+@Controller
+@RequestMapping("/holaMundo")
+public class HolaMundoController {
+
+	@RequestMapping(path="/Pepito")
+	public View holaMundoPepito(Model model){
+		return null;
+	}
+	
+	@RequestMapping(path="/Josito")
+	public String holaMundoJosito(Model model){
+		return null;
+	}
+	
+	@RequestMapping(path="/Jaimito")
+	public ModelAndView holaMundoJaimito(){
+		return null;
+	}
+	
+}

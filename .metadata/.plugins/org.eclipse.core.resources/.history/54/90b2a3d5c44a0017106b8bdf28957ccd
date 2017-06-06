@@ -1,0 +1,48 @@
+package com.viewnext.holamundomaven.views;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.View;
+
+/**
+ * 
+ * View que permite renderizar el contenido en text/html o text/plain, 
+ * en cualquier otro caso se lanzará una excepcion 
+ * 
+ * @author alumno
+ *
+ */
+public class CustomView implements View {
+	
+	public CustomView(String contentType) {
+		super();
+		this.contentType = contentType;
+	}
+
+	private String contentType; 
+	
+	@Override
+	public String getContentType() {
+		return contentType;
+	}
+
+	@Override
+	public void render(Map<String, ?> model, 
+			HttpServletRequest request, 
+			HttpServletResponse response) throws Exception {
+		switch (contentType) {
+		case "text/html":
+			response.getWriter().println("<div>" + model.get("nombre"));
+			break;
+		case "text/plain":
+			
+			break;
+		default:
+			throw new Exception("ContentType no soportado");
+		}
+	}
+
+}

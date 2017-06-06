@@ -1,0 +1,5 @@
+package com.viewnext.holamundomaven.servicios;
+
+public class BasicoServicio implements Servicio{
+
+}
