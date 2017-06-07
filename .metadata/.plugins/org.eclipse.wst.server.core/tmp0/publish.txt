@@ -1,5 +1,5 @@
 #Tomcat publish data
-#Tue Jun 06 20:29:43 CEST 2017
-org.eclipse.jst.j2ee.server\:03_Servicios=C\:\\Users\\alumno\\Downloads\\apache-tomcat-8.5.15\\apache-tomcat-8.5.15\\wtpwebapps\\02_HolaMundoProyectoMaven\\WEB-INF\\lib\\03_Servicios-0.0.1-SNAPSHOT.jar
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\alumno\\.m2\\repository\\org\\springframework\\spring-web\\4.3.8.RELEASE\\spring-web-4.3.8.RELEASE.jar=C\:\\Users\\alumno\\Downloads\\apache-tomcat-8.5.15\\apache-tomcat-8.5.15\\wtpwebapps\\02_HolaMundoProyectoMaven\\WEB-INF\\lib\\spring-web-4.3.8.RELEASE.jar
-org.eclipse.jst.jee.server\:02_HolaMundoProyectoMaven=C\:\\Users\\alumno\\Downloads\\apache-tomcat-8.5.15\\apache-tomcat-8.5.15\\wtpwebapps\\02_HolaMundoProyectoMaven
+#Wed Jun 07 20:32:24 CEST 2017
+org.eclipse.jst.jee.server\:04_HolaMundoJavaConfig=C\:\\Users\\alumno\\Downloads\\apache-tomcat-8.5.15\\apache-tomcat-8.5.15\\wtpwebapps\\04_HolaMundoJavaConfig
+org.eclipse.jst.j2ee.server\:03_Servicios=C\:\\Users\\alumno\\Downloads\\apache-tomcat-8.5.15\\apache-tomcat-8.5.15\\wtpwebapps\\04_HolaMundoJavaConfig\\WEB-INF\\lib\\03_Servicios-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\alumno\\.m2\\repository\\org\\springframework\\spring-web\\4.3.8.RELEASE\\spring-web-4.3.8.RELEASE.jar=C\:\\Users\\alumno\\Downloads\\apache-tomcat-8.5.15\\apache-tomcat-8.5.15\\wtpwebapps\\04_HolaMundoJavaConfig\\WEB-INF\\lib\\spring-web-4.3.8.RELEASE.jar

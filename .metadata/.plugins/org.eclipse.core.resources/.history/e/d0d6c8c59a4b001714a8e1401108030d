@@ -1,0 +1,5 @@
+package com.viewnext.holamundo.javaconfig.modelo.entidades;
+
+public class Persona {
+
+}

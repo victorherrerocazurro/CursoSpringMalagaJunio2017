@@ -1,0 +1,10 @@
+1496844375314	Delete element
+1496844625019	Delete element
+1496847027691	Extract local variable 'internalResourceViewResolver'
+1496847366168	Delete element
+1496847398647	Rename package 'com.viewnext.holamundomaven.controllers'
+1496847402525	Rename package 'com.viewnext.holamundomaven.views'
+1496847407072	Rename package 'com.viewnext.holamundo.javaconfig.configuration.views'
+1496847411523	Rename package 'com.viewnext.holamundo.javaconfig.configuration.controllers'
+1496847610191	Extract local variable 'holaMundoController'
+1496859314979	Move folder

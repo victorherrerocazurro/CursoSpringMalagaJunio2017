@@ -1,0 +1,5 @@
+package com.viewnext.holamundo.javaconfig.controllers;
+
+public class GestionPersonaController {
+
+}

@@ -1,0 +1,8 @@
+package com.viewnext.holamundo.javaconfig.configuration;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SpringConfiguration {
+
+}

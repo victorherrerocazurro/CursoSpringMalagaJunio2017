@@ -1,0 +1,5 @@
+package com.viewnext.holamundo.javaconfig.configuration;
+
+public class SpringConfiguration {
+
+}

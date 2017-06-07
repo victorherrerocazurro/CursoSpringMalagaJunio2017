@@ -13,7 +13,7 @@
 	</bean>-->
 
 	<bean id="contentTypeHtml" class="java.lang.String">
-		<constructor-arg name="original" value="text/plain"/>
+		<constructor-arg name="original" value="text/html"/>
 	</bean>
 	
 	<bean id="contentTypePlain" class="java.lang.String">
@@ -27,7 +27,12 @@
 	</bean>
 -->
 
-	<bean class="com.viewnext.holamundomaven.servicios.BasicoServicio"></bean>
+	<bean class="com.viewnext.holamundomaven.controllers.HolaMundoController" autowire="byType">
+		<property name="servicio" ref="servicio"/>	
+	
+	</bean>
+
+	<bean id="servicio" class="com.viewnext.holamundomaven.servicios.BasicoServicio"></bean>
 
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"/>

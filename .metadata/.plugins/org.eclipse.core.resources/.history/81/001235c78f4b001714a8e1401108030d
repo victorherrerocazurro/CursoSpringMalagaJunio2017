@@ -1,0 +1,16 @@
+package com.viewnext.holamundo.javaconfig.configuration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+@Configuration
+@EnableWebMvc
+public class SpringConfiguration {
+
+	@Bean
+	public String contentTypeHtml(){
+		return "text/html";
+	}
+	
+}

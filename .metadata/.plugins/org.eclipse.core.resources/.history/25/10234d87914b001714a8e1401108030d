@@ -1,0 +1,54 @@
+package com.viewnext.holamundo.javaconfig.configuration.controllers;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
+
+import com.viewnext.holamundo.javaconfig.configuration.views.CustomView;
+import com.viewnext.holamundomaven.servicios.Servicio;
+
+@Controller
+@RequestMapping("/holaMundo")
+public class HolaMundoController {
+
+	@Autowired
+	private Servicio servicio;
+	
+	@Autowired
+	private CustomView customView;
+	
+	public void setServicio(Servicio servicio) {
+		this.servicio = servicio;
+	}
+
+	public void setCustomView(CustomView customView) {
+		this.customView = customView;
+	}
+
+	@RequestMapping(path="/Pepito")
+	public View holaMundoPepito(Model model){
+		
+		model.addAttribute("nombre", "Pepito");
+		
+		return customView;
+	}
+	
+	@RequestMapping(path="/Josito")
+	public String holaMundoJosito(Model model){
+		
+		model.addAttribute("nombre", "Josito");
+		
+		return "exito";
+	}
+	
+	@RequestMapping(path="/Jaimito")
+	public ModelAndView holaMundoJaimito(){
+		return null;
+	}
+	
+}

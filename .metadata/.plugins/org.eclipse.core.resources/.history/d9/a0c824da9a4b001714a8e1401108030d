@@ -1,0 +1,39 @@
+package com.viewnext.holamundo.javaconfig.modelo.entidades;
+
+import java.util.Date;
+
+public class Persona {
+
+	private String nombre;
+	private Date fechaNacimiento;
+	private int dni;
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+	public int getDni() {
+		return dni;
+	}
+	public void setDni(int dni) {
+		this.dni = dni;
+	}
+	public Persona(String nombre, Date fechaNacimiento, int dni) {
+		super();
+		this.nombre = nombre;
+		this.fechaNacimiento = fechaNacimiento;
+		this.dni = dni;
+	}
+	public Persona() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+}

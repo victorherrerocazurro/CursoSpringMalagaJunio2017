@@ -1,0 +1,29 @@
+package com.viewnext.holamundo.javaconfig.configuration;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+
+import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
+
+public class WebConfiguration implements WebApplicationInitializer {
+
+	//Una vez que por el echo de tener en el classpath de la aplicacion web
+	//spring-web, se consigue ejecutar este método
+	@Override
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		AnnotationConfigWebApplicationContext webApplicationContext 
+							= new AnnotationConfigWebApplicationContext();
+
+		//Nos piden el nombre del paquete que contendra
+		webApplicationContext.scan("com.viewnext.holamundo.javaconfig.configuration");
+		
+		
+		DispatcherServlet dispatcherServlet = new DispatcherServlet(webApplicationContext );
+		servletContext.addServlet("DispatcherServlet", dispatcherServlet);
+		
+	}
+
+}

@@ -1,0 +1,57 @@
+package com.viewnext.holamundo.javaconfig.configuration;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import com.viewnext.holamundo.javaconfig.controllers.HolaMundoController;
+import com.viewnext.holamundo.javaconfig.views.CustomView;
+import com.viewnext.holamundomaven.servicios.BasicoServicio;
+import com.viewnext.holamundomaven.servicios.Servicio;
+
+@Configuration
+@EnableWebMvc
+@ComponentScan("com.viewnext.holamundo.javaconfig")
+public class SpringConfiguration {
+
+	@Bean
+	public String contentTypeHtml(){
+		return "text/html";
+	}
+	
+	@Bean
+	public String contentTypePlain(){
+		return "text/plain";
+	}
+	
+	@Bean
+	public Servicio servicio(){
+		return new BasicoServicio();
+	}
+	
+	@Bean
+	public ViewResolver internalResourceViewResolver(){
+		InternalResourceViewResolver viewResolver 
+			= new InternalResourceViewResolver("/WEB-INF/views/", ".jsp");
+		viewResolver.setOrder(1);
+		return viewResolver;
+	}
+	
+	@Bean
+	@Autowired
+	public HolaMundoController controlador(Servicio servicio, CustomView customView){
+		HolaMundoController holaMundoController = new HolaMundoController();
+		
+		holaMundoController.setCustomView(customView);
+		holaMundoController.setServicio(servicio());
+		
+		return holaMundoController;
+	}
+	
+	
+	
+}

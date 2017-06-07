@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form:form modelAttribute="persona" method="POST">
+		<form:input path="nombre"/>
+		<form:input path="fechaNacimiento"/>
+		<form:input path="dni"/>
+		<input type="submit">
+	</form:form>
+	
+	<form action="/04_HolaMundoJavaConfig/Persona/Alta" method="POST">
+		<input id="nombre" name="nombre" type="text" value="${persona.nombre}">
+		<input id="fechaNacimiento" name="fechaNacimiento" type="date" value="${persona.fechaNacimiento}">
+		<input id="dni" name="dni" type="text" value="${persona.dni}">
+		<input type="submit">
+	</form>
+
+</body>
+</html>
