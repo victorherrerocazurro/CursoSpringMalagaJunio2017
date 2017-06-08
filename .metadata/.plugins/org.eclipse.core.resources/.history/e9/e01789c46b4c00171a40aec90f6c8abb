@@ -1,0 +1,5 @@
+package com.viewnext.persona.rest.controllers;
+
+public class PersonaController {
+
+}

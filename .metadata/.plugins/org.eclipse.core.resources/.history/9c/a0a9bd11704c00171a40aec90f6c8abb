@@ -1,0 +1,27 @@
+package com.viewnext.persona.rest.controllers;
+
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("Persona")
+public class PersonaController {
+	
+	@RequestMapping(path="/{id}", method=RequestMethod.GET, produces={MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<Persona> get(@PathVariable(name="id", required=false) String nombre){
+		return null;
+	}
+	
+	@RequestMapping(method=RequestMethod.POST, consumes={MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<Void> post(@RequestBody Persona persona){
+		return null;
+	}
+	
+}

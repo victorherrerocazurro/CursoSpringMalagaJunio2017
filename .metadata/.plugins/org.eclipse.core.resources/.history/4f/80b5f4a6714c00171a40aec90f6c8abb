@@ -1,0 +1,58 @@
+package com.viewnext.persona.rest.controllers;
+
+import java.net.URI;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.viewnext.persona.rest.entidades.Persona;
+
+@RestController
+@RequestMapping("Persona")
+public class PersonaController {
+	
+	@RequestMapping(
+			method=RequestMethod.GET, 
+			produces={MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<List<Persona>> get(){
+		return null;
+	}
+	
+	@RequestMapping(
+			path="/{id}", 
+			method=RequestMethod.GET, 
+			produces={MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<Persona> getById(@PathVariable(name="id") String nombre){
+		
+		//Invocar el servicio que realiza la accion
+		
+		Persona resultadoDelServicio = new Persona("Victor", new Date(), 1);
+		
+		HttpStatus status = HttpStatus.ACCEPTED;
+		
+		return new ResponseEntity<>(resultadoDelServicio, status);
+	}
+	
+	@RequestMapping(method=RequestMethod.POST, consumes={MediaType.APPLICATION_JSON_VALUE})
+	public ResponseEntity<Void> post(@RequestBody Persona persona){
+		
+		//Invocar el servicio que realiza la accion
+		
+		HttpHeaders headers = new HttpHeaders();
+		
+		headers.setLocation(new URI(""));
+		
+		return null;
+	}
+	
+}

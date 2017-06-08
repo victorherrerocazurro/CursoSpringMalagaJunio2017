@@ -8,3 +8,10 @@
 1496847411523	Rename package 'com.viewnext.holamundo.javaconfig.configuration.controllers'
 1496847610191	Extract local variable 'holaMundoController'
 1496859314979	Move folder
+1496933073237	Extract local variable 'result'
+1496933241844	Move file
+1496933537694	Copy file
+1496934796048	Extract local variable 'interceptor'
+1496935161292	Extract local variable 'cookieLocaleResolver'
+1496940672115	Copy package
+1496942974004	Copy compilation unit
